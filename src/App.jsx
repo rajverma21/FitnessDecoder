@@ -7,6 +7,7 @@ import { BackgroundBeamsDemo } from './components/Join'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import React, { useState } from 'react'
 import auth from './firebase/Config'
+import WhyChooseUs from './components/WhyChooseUs'
 
 function App () {
   const [UserLogin, setUserLogin] = useState(true)
@@ -28,6 +29,7 @@ function App () {
           <Route path='/login' element={<LoginForm />} />
           <Route path='/waitlist' element={<Waitlist />} />
           <Route path='/join' element={<BackgroundBeamsDemo />} />
+          <Route path='/blogs' element={<WhyChooseUs />} />
         </Routes>
       </BrowserRouter>
     </div>
