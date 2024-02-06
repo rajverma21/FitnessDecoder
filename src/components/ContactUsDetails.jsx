@@ -11,7 +11,7 @@ function ContactUsDetails (props) {
         />
       </div>
       <div>
-        <p className="text-[1.2rem] whitespace-pre">{props.detail}</p>
+        <p className="text-[1.36rem] font-[500] whitespace-pre">{props.detail}</p>
       </div>
     </div>
   )

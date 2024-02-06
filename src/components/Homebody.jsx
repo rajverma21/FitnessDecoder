@@ -1,21 +1,18 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import firebase from '../firebase/Config'
+import { getAuth } from 'firebase/auth'
 
 function Homebody () {
-  const [isLoggedIn, setisLoggedIn] = useState(false)
-  const checkStatus = () => {
-    const user = firebase.auth().currentUser
+  const navigate = useNavigate()
+  const auth = getAuth()
+  const user = auth.currentUser
+
+  const whereToNavigate = () => {
     if (user) {
-      SetIsLoggedIn(true)
-      console.log('User Logged In')
-      navigate('/waitlist')
+      navigate("/waitlist")
     } else {
-      setisLoggedIn(false)
-      console.log('User Logged Out')
-      navigate('/login')
+      navigate("/login")
     }
   }
 
@@ -28,7 +25,7 @@ function Homebody () {
         Are you ready to unlock the full potential of your mind and body? At
         Fitness Decoder, we’re on a mission to redefine health and wellness
       </p>
-      <button className='p-4 login-button m-5' onClick={checkStatus}>
+      <button className='p-4 login-button m-5' onClick={whereToNavigate}>
         <span>Join the Waitlist</span>
       </button>
     </div>

@@ -13,13 +13,8 @@ function ContactUs () {
   const [subject, setsubject] = useState('')
   const [message, setmessage] = useState('')
 
-
   const handleSubmit = async event => {
     event.preventDefault()
-    console.log(name)
-    console.log(subject)
-    console.log(message)
-    console.log(email)
     try {
       const docRef = await addDoc(collection(db, 'ContactForm'), {
         Name: name,
@@ -39,9 +34,12 @@ function ContactUs () {
   return (
     <div className='flex justify-center items-center h-[100vh] w-[100%] text-[#e0d9d9]'>
       <div className='flex border-2 rounded-3xl overflow-hidden box-shadow'>
-        <div className='bg-green-900 flex flex-col px-[4rem] py-[6rem]'>
-          <h1 className='text-[3rem] tracking-wide'>Let's Get in Touch</h1>
-          <p>Open for ideas or just a friendly chat — Let's Make Moments!</p>
+        <div className='bg-green-900 flex flex-col px-[4rem] py-[5.2rem]'>
+          <h1 className='text-[3.6rem] tracking-wide'>Let's Get in Touch</h1>
+          <p className='text-[1.5rem] my-8 font-[500]'>
+            Open for ideas or just a friendly chat — <br />{' '}
+            <span>Let's Make Moments!</span>
+          </p>
           <div>
             <ContactUsDetails
               image={location}

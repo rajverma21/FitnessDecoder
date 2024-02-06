@@ -2,9 +2,19 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '../utils/cn'
 import { useNavigate } from 'react-router-dom';
+import { getAuth } from 'firebase/auth'
 
 export function BackgroundBeamsDemo () {
   const navigate = useNavigate()
+  const auth = getAuth()
+  const user = auth.currentUser
+  const whereToNavigate = () => {
+    if (user) {
+      navigate("/waitlist")
+    } else {
+      navigate("/login")
+    }
+  }
   return (
     <div className='h-screen bg-neutral-950 relative flex flex-col items-center justify-center antialiased'>
       <div className=' mx-auto p-4 flex flex-col items-center justify-center'>
@@ -17,7 +27,7 @@ export function BackgroundBeamsDemo () {
         </p>
         <button
           className='login-button m-5 z-40'
-          onClick={() => navigate('/login')}
+          onClick={whereToNavigate}
         >
           <span className="text-[1.36rem] font-[500]">JOIN THE WAITLIST</span>
         </button>

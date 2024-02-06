@@ -13,12 +13,12 @@ function Home () {
     <div>
       <Navbar />
       <BackgroundBeamsDemo />
-      {/* <Homebody /> */}
-      {/* <About /> */}
-      {/* <Waitlist /> */}
       <WhyChooseUs />
       <ContactUs />
       <Closing />
+      {/* <Homebody /> */}
+      {/* <Waitlist /> */}
+      {/* <About /> */}
     </div>
   )
 }
