@@ -1,12 +1,10 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Closing from './Closing'
-import About from './About'
-import Homebody from './Homebody'
-import Waitlist from './Waitlist'
-import WhyChooseUs from './WhyChooseUs'
 import { BackgroundBeamsDemo } from './Join'
+import WhyChooseUs from './WhyChooseUs'
 import ContactUs from './ContactUs'
+import AboutUs from './AboutUs'
+import Closing from './Closing'
 
 function Home () {
   return (
@@ -16,9 +14,7 @@ function Home () {
       <WhyChooseUs />
       <ContactUs />
       <Closing />
-      {/* <Homebody /> */}
-      {/* <Waitlist /> */}
-      {/* <About /> */}
+      <AboutUs />
     </div>
   )
 }

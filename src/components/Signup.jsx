@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import mail_icon from '../icons/mail.png'
 import padlock from '../icons/lock.png'
 import password1 from '../icons/hidden.png'
@@ -8,8 +10,6 @@ import facebook from '../icons/facebook.png'
 import google from '../icons/search.png'
 import twitter from '../icons/twitter.png'
 import user from '../icons/user.png'
-import { Link, useNavigate } from 'react-router-dom'
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import auth from '../firebase/Config'
 
 export default function Signup () {

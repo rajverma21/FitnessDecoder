@@ -233,7 +233,7 @@ html {
   position: absolute;
   top: 0;
   transform: translateX(var(--progress, 0));
-  transition: transform 0.26s ease;
+  transition: transform 0.21s ease;
   width: calc(100% + var(--tilt));
 }
 .login-button:hover:before {

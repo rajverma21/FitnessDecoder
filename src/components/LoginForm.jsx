@@ -21,11 +21,11 @@ const LoginForm = () => {
         <div className='toggle-container'>
           <div className='toggle'>
             <div className='toggle-panel toggle-left flex text-center gap-3'>
-              <h1 className='text-[3rem]'>No account yet?</h1>
+              <h1 className='text-[3rem]'>Already have an Account?</h1>
               <div>
                 <p className='text-[1.1rem]'>What are you waiting for?</p>
                 <p className='text-[1.1rem]'>
-                  Join the community and connect with like-minded individuals.
+                  Sign in & Join the Community and Connect with like-minded individuals.
                 </p>
               </div>
               <button
