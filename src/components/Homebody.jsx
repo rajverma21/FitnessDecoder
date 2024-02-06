@@ -4,19 +4,18 @@ import { Link } from 'react-router-dom'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import firebase from '../firebase/Config'
 
-function Homebody ({ UserLogin, setUserLogin }) {
-
+function Homebody () {
   const [isLoggedIn, setisLoggedIn] = useState(false)
   const checkStatus = () => {
     const user = firebase.auth().currentUser
     if (user) {
       SetIsLoggedIn(true)
-      console.log("User Logged In")
-      navigate("/waitlist")
+      console.log('User Logged In')
+      navigate('/waitlist')
     } else {
       setisLoggedIn(false)
-      console.log("User Logged Out")
-      navigate("/login")
+      console.log('User Logged Out')
+      navigate('/login')
     }
   }
 

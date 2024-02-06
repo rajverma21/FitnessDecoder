@@ -6,16 +6,18 @@ import Homebody from './Homebody'
 import Waitlist from './Waitlist'
 import WhyChooseUs from './WhyChooseUs'
 import { BackgroundBeamsDemo } from './Join'
+import ContactUs from './ContactUs'
 
-function Home ({ UserLogin, setUserLogin }) {
+function Home () {
   return (
     <div>
       <Navbar />
       <BackgroundBeamsDemo />
-      <Homebody UserLogin={UserLogin} setUserLogin={setUserLogin} />
-      <About />
-      <Waitlist />
+      {/* <Homebody /> */}
+      {/* <About /> */}
+      {/* <Waitlist /> */}
       <WhyChooseUs />
+      <ContactUs />
       <Closing />
     </div>
   )

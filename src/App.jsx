@@ -8,28 +8,21 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import React, { useState } from 'react'
 import auth from './firebase/Config'
 import WhyChooseUs from './components/WhyChooseUs'
+import ContactUs from './components/ContactUs'
+import AboutUs from './components/About'
 
 function App () {
-  const [UserLogin, setUserLogin] = useState(true)
-  const auth = getAuth()
-  const user = auth.currentUser
-  // console.log("user", user)
-  if (user) {
-    setUserLogin(true)
-  }
-
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route
-            path='/'
-            element={<Home UserLogin={UserLogin} setUserLogin={setUserLogin} />}
-          />
+          <Route path='/' element={<Home />} />
           <Route path='/login' element={<LoginForm />} />
           <Route path='/waitlist' element={<Waitlist />} />
           <Route path='/join' element={<BackgroundBeamsDemo />} />
           <Route path='/blogs' element={<WhyChooseUs />} />
+          <Route path='/Contact' element={<ContactUs />} />
+          <Route path='/About' element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
     </div>
