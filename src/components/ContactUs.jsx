@@ -27,6 +27,10 @@ function ContactUs () {
         Subject: subject,
         Message: message
       })
+      setname('')
+      setemail('')
+      setsubject('')
+      setmessage('')
     } catch {
       console.log('Data Lost')
     }
