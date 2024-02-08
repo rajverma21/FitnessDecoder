@@ -11,10 +11,10 @@ function Home () {
     <div>
       <Navbar />
       <BackgroundBeamsDemo />
+      <AboutUs />
       <WhyChooseUs />
       <ContactUs />
       <Closing />
-      <AboutUs />
     </div>
   )
 }

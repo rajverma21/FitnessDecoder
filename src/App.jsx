@@ -9,7 +9,7 @@ import Waitlist from './components/Waitlist'
 import LoginForm from './components/LoginForm'
 import WhyChooseUs from './components/WhyChooseUs'
 import ContactUs from './components/ContactUs'
-import AboutUs from './components/About'
+import AboutUs from './components/AboutUs'
 
 function App () {
   return (

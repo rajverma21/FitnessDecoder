@@ -26,7 +26,7 @@ export function BackgroundBeamsDemo () {
           Fitness Decoder, we’re on a mission to redefine health and wellness
         </p>
         <button
-          className='login-button m-5 z-40'
+          className='login-button m-5 z-30'
           onClick={whereToNavigate}
         >
           <span className="text-[1.36rem] font-[500]">JOIN THE WAITLIST</span>

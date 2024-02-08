@@ -32,8 +32,8 @@ function ContactUs () {
   }
 
   return (
-    <div className='flex justify-center items-center h-[100vh] w-[100%] text-[#e0d9d9]'>
-      <div className='flex border-2 rounded-3xl overflow-hidden box-shadow'>
+    <div className='flex justify-center py-[4rem] items-center h-[100vh] w-[100%] text-[#eee9e9] contact-us-background'>
+      <div className='flex rounded-3xl overflow-hidden box-shadow'>
         <div className='bg-green-900 flex flex-col px-[4rem] py-[5.2rem]'>
           <h1 className='text-[3.6rem] tracking-wide'>Let's Get in Touch</h1>
           <p className='text-[1.5rem] my-8 font-[500]'>
@@ -61,7 +61,7 @@ function ContactUs () {
         <form
           method='POST'
           onSubmit={handleSubmit}
-          className='px-10 flex flex-col justify-center'
+          className='px-10 flex flex-col justify-center bg-white'
         >
           <div className='flex flex-col my-4 w-[100%]'>
             <div className='flex gap-8'>
