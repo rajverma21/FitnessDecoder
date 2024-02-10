@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '../utils/cn'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import { getAuth } from 'firebase/auth'
 
 export function BackgroundBeamsDemo () {
@@ -10,26 +10,28 @@ export function BackgroundBeamsDemo () {
   const user = auth.currentUser
   const whereToNavigate = () => {
     if (user) {
-      navigate("/waitlist")
+      navigate('/waitlist')
     } else {
-      navigate("/login")
+      navigate('/login')
     }
   }
   return (
-    <div className='h-screen bg-neutral-950 relative flex flex-col items-center justify-center antialiased'>
+    <div className='h-[100vh] bg-neutral-950 relative flex flex-col items-center justify-center antialiased'>
       <div className=' mx-auto p-4 flex flex-col items-center justify-center'>
-        <h1 className='relative z-10 text-[6.1rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold'>
-          Gateway to Holistic Well-Being
+        <h1 className='relative z-10 text-[6.1rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold max-[960px]:text-[4.6rem] max-[700px]:text-[3.7rem] max-[570px]:text-[2.8rem] max-[477px]:text-[2.1rem] max-[477px]:px-[1.5rem]'>
+          Gateway to Holistic <br /> Well-Being
         </h1>
-        <p className='text-neutral-400 max-w-[58rem] mx-auto mt-3 mb-8 text-[1.3rem] text-center relative z-10'>
+        <p className='text-neutral-400 max-w-[58rem] mx-auto mt-3 mb-8 text-[1.3rem] text-center relative z-10 max-[960px]:text-[1.1rem] max-[700px]:text-[0.9rem] max-[700px]:px-[3.9rem] max-[570px]:text-[0.7rem] max-[477px]:text-[0.5rem]'>
           Are you ready to unlock the full potential of your mind and body? At
           Fitness Decoder, we’re on a mission to redefine health and wellness
         </p>
         <button
-          className='login-button m-5 z-30'
+          className='login-button m-5 z-30 max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[700px]:px-[1.3rem] max-[700px]:py-[0.5rem]'
           onClick={whereToNavigate}
         >
-          <span className="text-[1.36rem] font-[500]">JOIN THE WAITLIST</span>
+          <span className='text-[1.36rem] font-[500] max-[960px]:text-[1rem] max-[570px]:text-[0.8rem] '>
+            JOIN THE WAITLIST
+          </span>
         </button>
       </div>
       <BackgroundBeams />
@@ -93,7 +95,7 @@ export const BackgroundBeams = ({ className }) => {
   return (
     <div
       className={cn(
-        'absolute  h-full w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center',
+        'absolute  h-full w-full inset-0 [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center',
         className
       )}
     >

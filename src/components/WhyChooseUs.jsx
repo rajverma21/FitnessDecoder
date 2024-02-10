@@ -17,7 +17,9 @@ function WhyChooseUs () {
       <div className='flex gap-[3rem] justify-center'>
         <Card
           title='Prioritizing Mental Health'
-          description='We understand that true well-being starts from within. Our core emphasis on mental health sets us apart. We believe that a strong mind is the foundation for a strong body and a fulfilling life.'
+          description='We understand that true well-being starts from within. Our core
+          emphasis on mental health sets us apart. We believe that a strong mind
+          is the foundation for a strong body and a fulfilling life.'
           image={user}
           buttonDescription='Learn More'
         />

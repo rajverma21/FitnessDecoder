@@ -5,6 +5,7 @@ import WhyChooseUs from './WhyChooseUs'
 import ContactUs from './ContactUs'
 import AboutUs from './AboutUs'
 import Closing from './Closing'
+import CircularDemo from './CircularDemo'
 
 function Home () {
   return (
@@ -12,7 +13,8 @@ function Home () {
       <Navbar />
       <BackgroundBeamsDemo />
       <AboutUs />
-      <WhyChooseUs />
+      <CircularDemo />
+      {/* <WhyChooseUs /> */}
       <ContactUs />
       <Closing />
     </div>

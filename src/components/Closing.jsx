@@ -7,7 +7,7 @@ export default function Closing () {
   const navigate = useNavigate()
   return (
     <div>
-      <div className='bg-[#3d3d3d] h-auto cursor-default w-full py-[3%] px-[10%] text-white flex gap-10 justify-between'>
+      <div className='bg-[#343434] h-auto cursor-default w-full py-[3%] px-[10%] text-white flex gap-10 justify-between'>
         <div className='w-[31%] p-1'>
           <p className='text-[2.2rem] m-1 font-[700]'>FitnessDecoder.</p>
           <p className='text-[13.5px] m-1'>
@@ -18,13 +18,13 @@ export default function Closing () {
             wellness:
           </p>
           <div className='flex gap-5 my-4'>
-            <button onClick={() => navigate('/login')}>
+            <button onClick={() => navigate('/')}>
               <FaFacebook size={19} />
             </button>
-            <button onClick={() => navigate('/login')}>
+            <button onClick={() => navigate('/')}>
               <FaInstagram size={19} />
             </button>
-            <button onClick={() => navigate('/login')}>
+            <button onClick={() => navigate('/')}>
               <IoLogoTwitter size={19} />
             </button>
           </div>
