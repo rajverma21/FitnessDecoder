@@ -21,7 +21,7 @@ export function BackgroundBeamsDemo () {
         <h1 className='relative z-10 text-[6.1rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold max-[960px]:text-[4.6rem] max-[700px]:text-[3.7rem] max-[570px]:text-[2.8rem] max-[477px]:text-[2.1rem] max-[477px]:px-[1.5rem]'>
           Gateway to Holistic <br /> Well-Being
         </h1>
-        <p className='text-neutral-400 max-w-[58rem] mx-auto mt-3 mb-8 text-[1.3rem] text-center relative z-10 max-[960px]:text-[1.1rem] max-[700px]:text-[0.9rem] max-[700px]:px-[3.9rem] max-[570px]:text-[0.7rem] max-[477px]:text-[0.5rem]'>
+        <p className='text-neutral-400 max-w-[58rem] mx-auto mt-3 mb-8 text-[1.3rem] text-center relative z-10 max-[960px]:text-[1.1rem] max-[700px]:text-[0.9rem] max-[700px]:px-[3.9rem] max-[570px]:text-[0.8rem] max-[477px]:text-[0.7rem]'>
           Are you ready to unlock the full potential of your mind and body? At
           Fitness Decoder, we’re on a mission to redefine health and wellness
         </p>

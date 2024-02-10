@@ -38,7 +38,7 @@ export default function Navbar () {
   }
 
   return (
-    <div className='flex flex-row w-[100vw] h-[12vh] justify-around items-center bg-gradient-to-b from-gray-700 to-gray-900 fixed top-0 left-0 font-[700] right-0 z-40 cursor-default max-[960px]:sticky max-[693px]:h-auto max-[693px]:justify-center max-[693px]:py-[2.2rem] max-[693px]:gap-[1rem] max-[693px]:flex-col max-[1440px]:text-[2rem]'>
+    <div className='flex flex-row w-[100vw] h-[12vh] justify-around items-center bg-gradient-to-b from-gray-700 to-gray-900 fixed top-0 left-0 font-[700] right-0 z-40 cursor-default max-[693px]:h-auto max-[693px]:justify-center max-[693px]:py-[2.2rem] max-[693px]:gap-[1rem] max-[693px]:flex-col max-[1440px]:text-[2rem]'>
       <button onClick={() => navigate('/')}>
         <img src={logo} className='h-[60px] max-[960px]:h-[50px] max-[693px]:h-[40px]' alt='LoGo' />
       </button>
@@ -59,19 +59,19 @@ export default function Navbar () {
           <div className='hidden max-[693px]:block max-[693px]:right-[15px]'>
             {UserName === 'LOGIN' ? (
               <button
-                className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[477px]:px-[1rem] max-[477px]:py-[0.6rem]'
+                className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[477px]:px-[1rem] max-[477px]:py-[0.5rem]'
                 onClick={whereToNavigate}
               >
-                <span className='text-[1.35rem]  max-[477px]:text-[1rem] '>
+                <span className='text-[1.35rem] max-[477px]:text-[0.9rem] '>
                   {UserName}
                 </span>
               </button>
             ) : (
               <button
-                className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[477px]:px-[1rem] max-[477px]:py-[0.6rem]'
+                className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[477px]:px-[1rem] max-[477px]:py-[0.5rem]'
                 onClick={whereToNavigate}
               >
-                <span className='text-[1.35rem] max-[477px]:text-[1rem] '>{UserName}</span>
+                <span className='text-[1.35rem] max-[477px]:text-[0.9rem] '>{UserName}</span>
               </button>
             )}
             <div className='flex justify-center'>

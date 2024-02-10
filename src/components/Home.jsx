@@ -6,17 +6,19 @@ import ContactUs from './ContactUs'
 import AboutUs from './AboutUs'
 import Closing from './Closing'
 import CircularDemo from './CircularDemo'
+import Footer from './Footer'
 
 function Home () {
   return (
     <div>
       <Navbar />
       <BackgroundBeamsDemo />
-      <AboutUs />
-      <CircularDemo />
+      {/* <AboutUs /> */}
+      {/* <CircularDemo /> */}
       {/* <WhyChooseUs /> */}
-      <ContactUs />
+      {/* <ContactUs /> */}
       <Closing />
+      <Footer />
     </div>
   )
 }
