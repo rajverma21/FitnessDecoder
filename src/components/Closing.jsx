@@ -10,10 +10,10 @@ export default function Closing () {
     <div className=''>
       <div className='bg-[#343434] h-auto cursor-default w-[100vw] py-[3%] px-[10%] text-white flex gap-10 justify-between max-[960px]:px-[5%] max-[960px]:gap-4 max-[740px]:flex-col max-[740px]:justify-center max-[740px]:items-center'>
         <div className='w-[31%] p-1 max-[740px]:w-[80%] max-[420px]:w-[90%]'>
-          <p className='text-[2.2rem] m-1 font-[700] max-[740px]:text-[1.9rem] max-[420px]:text-[1.5rem] max-[310px]:text-[1.2rem]'>
+          <p className='text-[2.2rem] m-1 font-[700] max-[740px]:text-[1.9rem] max-[420px]:text-[1.5rem] max-[310px]:text-[1.23rem]'>
             FitnessDecoder.
           </p>
-          <p className='text-[13.5px] m-1 max-[740px]:text-[12px] max-[420px]:text-[10px] max-[310px]:text-[8.2px]'>
+          <p className='text-[13.5px] m-1 max-[740px]:text-[12px] max-[420px]:text-[10px] max-[310px]:text-[8.23px]'>
             Embark on a personalized journey to well-being with our Life Coach
             service. Our experts are here to guide you every step of the way,
             tailoring fitness plans and mental health support to your unique

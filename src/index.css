@@ -250,14 +250,28 @@ html {
 
 /* Contact Us Background */
 .contact-us-background {
-  background: linear-gradient(to bottom, #58c791 0%, #70ce78 100%);
+  background: linear-gradient(to bottom, #4dad7f 0%, #56ac5d 100%);
 }
 
 /* Contact Us box shadow */
-.box-shadow {
+.box-shadow-over-786px {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.box-shadow-below-786px {
+  box-shadow: none;
+}
+@media only screen and (max-width: 786px) {
+  .box-shadow-over-786px {
+    box-shadow: none;
+  }
+  .box-shadow-below-786px {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
 }
 
 .send-message-button {
