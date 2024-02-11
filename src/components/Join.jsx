@@ -16,7 +16,7 @@ export function BackgroundBeamsDemo () {
     }
   }
   return (
-    <div className='h-[100vh] bg-neutral-950 relative flex flex-col items-center justify-center antialiased max-[570px]:h-[90vh] max-[700px]:h-[95vh]'>
+    <div className='h-[100vh] bg-neutral-950 relative flex flex-col items-center justify-center antialiased'>
       <div className=' mx-auto p-4 flex flex-col items-center justify-center'>
         <h1 className='relative z-10 text-[6.1rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold max-[960px]:text-[4.65rem] max-[700px]:text-[3.85rem] max-[570px]:text-[3.94rem] max-[477px]:px-[1.5rem]'>
           Gateway to Holistic <br /> Well-Being

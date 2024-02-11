@@ -38,7 +38,7 @@ export default function Navbar () {
   }
 
   return (
-    <div className='flex flex-row w-[100vw] h-[12vh] justify-around items-center bg-gradient-to-b from-gray-700 to-gray-900 fixed top-0 left-0 font-[700] right-0 z-40 cursor-default max-[693px]:h-auto max-[693px]:justify-center max-[693px]:py-[2.2rem] max-[693px]:gap-[1rem] max-[693px]:flex-col max-[1440px]:text-[2rem]'>
+    <div className='flex flex-row w-[100%] h-[12vh] justify-around items-center bg-gradient-to-b from-gray-700 to-gray-900 fixed top-0 left-0 font-[700] right-0 z-40 cursor-default max-[693px]:h-auto max-[693px]:justify-center max-[693px]:py-[2.2rem] max-[693px]:gap-[1rem] max-[693px]:flex-col max-[1440px]:text-[2rem]'>
       <button onClick={() => navigate('/')}>
         <img
           src={logo}

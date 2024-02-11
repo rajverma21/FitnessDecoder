@@ -32,13 +32,13 @@ function ContactUs () {
   }
 
   return (
-    <div className='flex justify-center py-[4rem] items-center overflow-hidden h-[100vh] w-[100%] text-[#eee9e9] contact-us-background'>
-      <div className='flex rounded-3xl bg-transparent min-[786px]:overflow-hidden max-[786px]:gap-[4rem] box-shadow-over-786px max-[786px]:flex-col max-[421px]:gap-[3.3rem]'>
-        <div className='bg-green-900 flex flex-col px-[4rem] py-[5.2rem] box-shadow-below-786px max-[786px]:pt-[2.3rem] max-[786px]:pb-[2rem] max-[786px]:rounded-3xl max-[786px]:px-[3.5rem]  max-[421px]:px-[3rem]'>
-          <h1 className='text-[3.6rem] tracking-wide max-[786px]:text-[3rem] max-[693px]:text-[2.9rem] max-[440px]:text-[2.86rem] max-[421px]:text-[2.6rem]'>
+    <div className='flex justify-center py-[4rem] items-center overflow-hidden w-[100%] text-[#eee9e9] contact-us-background'>
+      <div className='flex rounded-3xl bg-transparent min-[786px]:overflow-hidden max-[786px]:gap-[4rem] box-shadow-over-786px max-[786px]:flex-col max-[421px]:gap-[3rem]'>
+        <div className='bg-green-900 flex flex-col px-[4rem] py-[5.2rem] box-shadow-below-786px max-[786px]:pt-[2.3rem] max-[786px]:pb-[2rem] max-[786px]:rounded-3xl max-[786px]:px-[3.5rem] max-[421px]:px-[3rem]'>
+          <h1 className='text-[3.6rem] tracking-wide max-[786px]:text-[3rem] max-[693px]:text-[2.8rem] max-[440px]:text-[2.3rem]'>
             Let's Get in Touch
           </h1>
-          <p className='text-[1.5rem] my-8 font-[500] max-[786px]:text-[1.47rem] max-[693px]:text-[1.4rem] max-[693px]:my-6 max-[440px]:text-[1.35rem] max-[421px]:text-[1.25rem]'>
+          <p className='text-[1.5rem] my-8 font-[500] max-[786px]:text-[1.47rem] max-[693px]:text-[1.36rem] max-[693px]:my-4 max-[440px]:text-[1.2rem]'>
             Open for ideas or just a friendly chat — <br />{' '}
             <span className=''>Let's Make Moments!</span>
           </p>
@@ -63,12 +63,12 @@ function ContactUs () {
         <form
           method='POST'
           onSubmit={handleSubmit}
-          className='px-10 flex flex-col justify-center bg-white max-[786px]:py-[2.8rem] max-[786px]:rounded-3xl box-shadow-below-786px max-[786px]:px-[3.5rem] max-[440px]:px-[2.8rem]'
+          className='px-10 flex flex-col justify-center bg-white max-[786px]:py-[2.8rem] max-[786px]:rounded-3xl box-shadow-below-786px max-[786px]:px-[3.5rem] max-[440px]:px-[2.8rem] max-[440px]:py-[1.8rem]'
         >
           <div className='flex flex-col my-4'>
             <div className='flex gap-8 max-[440px]:flex-col'>
               <div className='flex flex-col'>
-                <label className='font-[600] text-[1.48rem] text-[#121212] mb-2 max-[440px]:text-[1.42prem] max-[421px]:text-[1.39rem]'>
+                <label className='font-[600] text-[1.48rem] text-[#121212] mb-2 max-[440px]:text-[1.37prem] max-[421px]:text-[1.3rem]'>
                   FULL NAME
                 </label>
                 <input
@@ -81,7 +81,7 @@ function ContactUs () {
                 />
               </div>
               <div className='flex flex-col'>
-                <label className='font-[600] text-[1.48rem] text-[#121212] mb-2 max-[440px]:text-[1.42prem] max-[421px]:text-[1.39rem]'>
+                <label className='font-[600] text-[1.48rem] text-[#121212] mb-2 max-[440px]:text-[1.37prem] max-[421px]:text-[1.3rem]'>
                   EMAIL ADDRESS
                 </label>
                 <input
@@ -96,7 +96,7 @@ function ContactUs () {
             </div>
           </div>
           <div className='flex flex-col my-4 w-[100%]'>
-            <label className='font-[600] text-[1.48rem] text-[#121212] mb-2 max-[440px]:text-[1.42prem] max-[421px]:text-[1.39rem]'>
+            <label className='font-[600] text-[1.48rem] text-[#121212] mb-2 max-[440px]:text-[1.37prem] max-[421px]:text-[1.3rem]'>
               SUBJECT
             </label>
             <input
@@ -109,7 +109,7 @@ function ContactUs () {
             />
           </div>
           <div className='flex flex-col my-4 w-[100%]'>
-            <label className='font-[600] text-[1.48rem] text-[#121212] mb-2 max-[440px]:text-[1.42prem] max-[421px]:text-[1.39rem]'>
+            <label className='font-[600] text-[1.48rem] text-[#121212] mb-2 max-[440px]:text-[1.37prem] max-[421px]:text-[1.3rem]'>
               MESSAGE
             </label>
             <input
@@ -124,7 +124,7 @@ function ContactUs () {
 
           <button
             type='submit'
-            className='bg-slate-400 w-[54%] mx-auto mt-[3rem] p-3 send-message-button max-[440px]:text-[1.42prem] '
+            className='bg-slate-400 w-[58%] mx-auto mt-[3rem] p-3 send-message-button max-[440px]:text-[1.37prem] max-[500px]:mt-[1.75rem]'
           >
             Send Message
           </button>
