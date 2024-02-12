@@ -10,16 +10,15 @@ import Footer from './Footer'
 
 function Home () {
   return (
-    <div>
+    <>
       <Navbar />
       <BackgroundBeamsDemo />
       {/* <AboutUs /> */}
-      {/* <CircularDemo /> */}
-      {/* <WhyChooseUs /> */}
+      <WhyChooseUs />
       <ContactUs />
       <Closing />
       <Footer />
-    </div>
+    </>
   )
 }
 

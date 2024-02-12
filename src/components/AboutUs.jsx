@@ -8,7 +8,7 @@ import Services from './Services'
 
 function AboutUs () {
   return (
-    <div className='flex flex-col gap-[6rem] justify-center items-center my-[1rem] w-[100vw] py-[50px]'>
+    <div className='flex flex-col gap-[6rem] justify-center items-center my-[1rem] w-[100%] py-[50px]'>
       <div className='flex flex-1 w-[90%] justify-center gap-[4.5rem] px-[2rem] my-[20px]'>
         <div className='flex flex-col px-[4rem] py-[5rem] about-us-left-div w-[50%] rounded-3xl'>
           <h4 className='about-us-small-heading text-[1.8rem] px-[2rem]'>
