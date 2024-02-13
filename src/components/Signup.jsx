@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { TwitterAuthProvider } from 'firebase/auth'
 import mail_icon from '../icons/mail.png'
 import padlock from '../icons/lock.png'
 import password1 from '../icons/hidden.png'
@@ -11,6 +13,7 @@ import google from '../icons/search.png'
 import twitter from '../icons/twitter.png'
 import user from '../icons/user.png'
 import auth from '../firebase/Config'
+import twitterLogin from '../icons/twitterLogin.png'
 
 export default function Signup () {
   const [Email, setEmail] = useState('')
@@ -21,6 +24,8 @@ export default function Signup () {
   const [Visibility, setVisibility] = useState(password1)
   const [ErrMessage, setErrMessage] = useState('')
   const navigate = useNavigate()
+  const provider = new GoogleAuthProvider()
+  const providerTwitter = new TwitterAuthProvider()
 
   const show_password = event => {
     event.preventDefault()
@@ -39,12 +44,12 @@ export default function Signup () {
     createUserWithEmailAndPassword(auth, Email, Password)
       .then(async userCredential => {
         setDisableDoubleClick(false)
-        console.log(userCredential)
+        // console.log(userCredential)
         const user = userCredential.user
         await updateProfile(user, {
           displayName: Username
         })
-        console.log(userCredential.user.displayName)
+        // console.log(userCredential.user.displayName)
         navigate('/')
       })
       .catch(error => {
@@ -52,6 +57,26 @@ export default function Signup () {
         const errorMessage = error.message
         setDisableDoubleClick(false)
         setErrMessage(errorCode.toUpperCase().substring(5))
+      })
+  }
+
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then(result => {
+        navigate('/')
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+  const signInWithTwitter = () => {
+    signInWithPopup(auth, providerTwitter)
+      .then(result => {
+        navigate('/')
+      })
+      .catch(error => {
+        console.log(error)
       })
   }
 
@@ -94,7 +119,7 @@ export default function Signup () {
                 className='h-full px-4 bg-transparent flex-1 text-[1.4rem] focus:outline-none placeholder:text-[1.4rem]'
                 placeholder='Password'
                 required
-                autoComplete="off"
+                autoComplete='off'
               />
               <button>
                 <img
@@ -144,11 +169,17 @@ export default function Signup () {
             <button className='h-[3.7rem] p-3 border-2 rounded-[50%] border-[#b8bdc5]'>
               <img src={facebook} className='h-[1.9rem]' alt='' />
             </button>
-            <button className='h-[3.7rem] p-3 border-2 rounded-[50%] border-[#b8bdc5]'>
+            <button
+              className='h-[3.7rem] p-3 border-2 rounded-[50%] border-[#b8bdc5]'
+              onClick={signInWithGoogle}
+            >
               <img src={google} className='h-[1.9rem]' alt='' />
             </button>
-            <button className='h-[3.6rem] p-3 border-2 rounded-[50%] border-[#b8bdc5]'>
-              <img src={twitter} className='h-[1.4rem]' alt='' />
+            <button
+              className='h-[3.6rem] p-3 border-2 rounded-[50%] border-[#b8bdc5]'
+              onClick={signInWithTwitter}
+            >
+              <img src={twitterLogin} className='h-[1.4rem]' alt='' />
             </button>
           </div>
         </div>

@@ -11,6 +11,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import auth from '../firebase/Config'
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { TwitterAuthProvider } from 'firebase/auth'
+import twitterLogin from '../icons/twitterLogin.png'
 
 export default function Login () {
   const [Email, setEmail] = useState('')
@@ -21,6 +23,7 @@ export default function Login () {
   const [ErrMessage, setErrMessage] = useState('')
   const navigate = useNavigate()
   const provider = new GoogleAuthProvider()
+  const providerTwitter = new TwitterAuthProvider()
 
   const show_password = event => {
     event.preventDefault()
@@ -51,6 +54,16 @@ export default function Login () {
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
+      .then(result => {
+        navigate('/')
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+  const signInWithTwitter = () => {
+    signInWithPopup(auth, providerTwitter)
       .then(result => {
         navigate('/')
       })
@@ -144,8 +157,11 @@ export default function Login () {
           >
             <img src={google} className='h-[1.9rem]' alt='' />
           </button>
-          <button className='h-[3.7rem] p-3 border-2 rounded-[50%] border-[#b8bdc5]'>
-            <img src={twitter} className='h-[1.6rem]' alt='' />
+          <button
+            className='h-[3.7rem] p-3 border-2 rounded-[50%] border-[#b8bdc5] '
+            onClick={signInWithTwitter}
+          >
+            <img src={twitterLogin} className='h-[1.6rem]' alt='' />
           </button>
         </div>
       </div>
