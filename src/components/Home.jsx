@@ -5,7 +5,6 @@ import WhyChooseUs from './WhyChooseUs'
 import ContactUs from './ContactUs'
 import AboutUs from './AboutUs'
 import Closing from './Closing'
-import CircularDemo from './CircularDemo'
 import Footer from './Footer'
 
 function Home () {
@@ -13,11 +12,7 @@ function Home () {
     <>
       <Navbar />
       <BackgroundBeamsDemo />
-      {/* <AboutUs /> */}
-      <WhyChooseUs />
-      <ContactUs />
       <Closing />
-      <Footer />
     </>
   )
 }

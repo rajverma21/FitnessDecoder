@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -250,7 +252,13 @@ html {
 
 /* Contact Us Background */
 .contact-us-background {
-  background: linear-gradient(to bottom, #4dad7f 0%, #56ac5d 100%);
+  background: #bbbac4;
+}
+
+@media only screen and (max-width: 786px) {
+  .contact-us-background {
+    padding: 5rem 0rem;
+  }
 }
 
 /* Contact Us box shadow */
@@ -395,4 +403,10 @@ html {
 .about-us-left-div {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* Services Heading */
+.services-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
 }

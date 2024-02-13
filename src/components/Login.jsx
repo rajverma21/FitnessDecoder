@@ -86,6 +86,7 @@ export default function Login () {
               className='h-full px-4 bg-transparent flex-1 text-[1.4rem] focus:outline-none placeholder:text-[1.4rem]'
               placeholder='Password'
               required
+              autoComplete='off'
             />
             <button>
               <img

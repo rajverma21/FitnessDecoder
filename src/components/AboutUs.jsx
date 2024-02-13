@@ -4,11 +4,14 @@ import fastforward from '../icons/fast-forward.png'
 import left1 from '../assets/images/left1.png'
 import left2 from '../assets/images/left2.png'
 import right1 from '../assets/images/right1.png'
-import Services from './Services'
+import Navbar from './Navbar'
+import Closing from './Closing'
 
 function AboutUs () {
   return (
-    <div className='flex flex-col gap-[6rem] justify-center items-center my-[1rem] w-[100%] py-[50px]'>
+    <div className='flex flex-col gap-[6rem] justify-center items-center w-[100%] bg-[#EFEFEF]'>
+      <Navbar />
+      <h1 className='services-heading text-[4rem] underline underline-offset-4 text-[#373636]'>ABOUT US</h1>
       <div className='flex flex-1 w-[90%] justify-center gap-[4.5rem] px-[2rem] my-[20px]'>
         <div className='flex flex-col px-[4rem] py-[5rem] about-us-left-div w-[50%] rounded-3xl'>
           <h4 className='about-us-small-heading text-[1.8rem] px-[2rem]'>
@@ -36,8 +39,7 @@ function AboutUs () {
           <img src={Aboutus_logo} className='object-cover w-[70%]' alt='' />
         </div>
       </div>
-      <Services />
-      <div className='flex w-[90%] justify-center gap-[4rem] px-[2rem]'>
+      {/* <div className='flex w-[90%] justify-center gap-[4rem] px-[2rem]'>
         <div className='flex justify-center items-center'>
           <img src={left1} className='object-cover w-[90%]' alt='' />
         </div>
@@ -169,9 +171,10 @@ function AboutUs () {
                 Personalized Counseling
               </p>
             </div>
-          </div>
+          </div> 
         </div>
-      </div>
+      </div>*/}
+      <Closing />
     </div>
   )
 }

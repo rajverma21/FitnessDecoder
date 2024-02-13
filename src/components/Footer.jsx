@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer () {
   return (
-    <div className='w-full h-auto flex justify-center px-[11%] py-[0.8%] items-center cursor-default'>
+    <div className='w-full h-auto flex justify-center px-[11%] py-[0.8%] items-center cursor-default bg-slate-50'>
       <p className='text-[14px] font-[600] text-[#333333] max-[740px]:text-[12px] max-[420px]:text-[10px] max-[420px]:font-[700]'>
         &#169; FitnessDecoder. All Rights Resevered
       </p>

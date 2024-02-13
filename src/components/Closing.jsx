@@ -4,6 +4,9 @@ import { FaInstagram } from 'react-icons/fa6'
 import { IoLogoTwitter } from 'react-icons/io'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import X_twitter from '../icons/X_twitter1.png'
+import Footer from './Footer'
+
 export default function Closing () {
   const navigate = useNavigate()
   return (
@@ -21,15 +24,28 @@ export default function Closing () {
             wellness:
           </p>
           <div className='flex gap-5 my-4'>
-            <button onClick={() => navigate('/')}>
-              <FaFacebook size={18} />
-            </button>
-            <button onClick={() => navigate('/')}>
-              <FaInstagram size={18} />
-            </button>
-            <button onClick={() => navigate('/')}>
-              <IoLogoTwitter size={18} />
-            </button>
+            <a
+              href='https://www.facebook.com/thefitnessdecoder?mibextid=ZbWKwL'
+              target='_blank'
+            >
+              <button>
+                <FaFacebook size={18} />
+              </button>
+            </a>
+            <a
+              href='https://www.instagram.com/getfitnessdecoder?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D'
+              target='_blank'
+            >
+              <button>
+                <FaInstagram size={18} />
+              </button>
+            </a>
+            <a
+              href='https://twitter.com/fit_decoder?t=6YAQUvlUei0bvlmfnvzk6Q&s=08'
+              target='_blank'
+            >
+              <img src={X_twitter} className='h-[1.85rem]' alt='' />
+            </a>
           </div>
         </div>
         <div className='ml-[4%] w-[60%] flex gap-32 py-1 px-8 justify-end max-[960px]:gap-16 max-[740px]:w-[80%] max-[420px]:w-[90%] max-[740px]:justify-start max-[740px]:ml-[1%] max-[740px]:px-[5px] max-[310px]:gap-[2rem]'>
@@ -74,6 +90,7 @@ export default function Closing () {
           </ul>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

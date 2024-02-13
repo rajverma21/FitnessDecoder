@@ -10,6 +10,7 @@ import LoginForm from './components/LoginForm'
 import WhyChooseUs from './components/WhyChooseUs'
 import ContactUs from './components/ContactUs'
 import AboutUs from './components/AboutUs'
+import Countdown from "./components/Countdown";
 
 function App () {
   return (
@@ -20,9 +21,10 @@ function App () {
           <Route path='/login' element={<LoginForm />} />
           <Route path='/waitlist' element={<Waitlist />} />
           <Route path='/join' element={<BackgroundBeamsDemo />} />
-          <Route path='/blogs' element={<WhyChooseUs />} />
+          <Route path='/services' element={<WhyChooseUs />} />
           <Route path='/contact' element={<ContactUs />} />
           <Route path='/about' element={<AboutUs />} />
+          <Route path='/blogs' element={<Countdown />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase/Config'
+import { signOut } from 'firebase/auth'
 import logo from '../assets/images/LoGo2.png'
 import userLogo from '../icons/user.png'
 import edit from '../icons/edit.png'
@@ -36,9 +37,23 @@ export default function Navbar () {
       navigate('/login')
     }
   }
+  const helpNavigate = () => {
+    navigate('/contact')
+  }
+
+  const UserSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        console.log('Sign-out successful')
+      })
+      .catch(error => {
+        console.log('Sign-out unsuccessfuly')
+      })
+    setToggle(!toggle)
+  }
 
   return (
-    <div className='flex flex-row w-[100%] h-[12vh] justify-around items-center bg-gradient-to-b from-gray-700 to-gray-900 fixed top-0 left-0 font-[700] right-0 z-40 cursor-default max-[693px]:h-auto max-[693px]:justify-center max-[693px]:py-[2.2rem] max-[693px]:gap-[1rem] max-[693px]:flex-col max-[1440px]:text-[2rem]'>
+    <div className='flex flex-row w-[100%] h-[12vh] justify-around items-center bg-gradient-to-b from-gray-700 to-gray-900 sticky top-0 left-0 font-[700] right-0 z-40 cursor-default max-[693px]:h-auto max-[693px]:justify-center max-[693px]:py-[2.2rem] max-[693px]:gap-[1rem] max-[693px]:flex-col max-[1440px]:text-[2rem]'>
       <button onClick={() => navigate('/')}>
         <img
           src={logo}
@@ -47,12 +62,15 @@ export default function Navbar () {
         />
       </button>
       <div>
-        <ul className='flex items-center justify-center flex-row text-[1.47rem] text-[rgb(203,200,200)] gap-[7rem] max-[960px]:gap-[5rem] max-[693px]:text-[1.2rem] max-[693px]:gap-[4rem] max-[477px]:text-[1.2rem] max-[477px]:gap-[1.8rem] max-[310px]:gap-[1.4rem] max-[300px]:text-[1.1rem]'>
+        <ul className='flex items-center justify-center flex-row text-[1.47rem] text-[rgb(203,200,200)] gap-[7rem] max-[960px]:gap-[5rem] max-[693px]:text-[1.2rem] max-[693px]:gap-[4rem] max-[510px]:text-[1.2rem] max-[510px]:gap-[1.8rem] max-[371px]:gap-[1.2rem] max-[371px]:text-[1rem]'>
           <li className='transition duration-100 hover-underline-animation ease-in-out font-medium flex justify-center items-center'>
             <Link to='/'>Home</Link>
           </li>
           <li className='transition duration-100 hover-underline-animation ease-in-out font-medium'>
             <Link to='/about'>About</Link>
+          </li>
+          <li className='transition duration-100 hover-underline-animation ease-in-out font-medium'>
+            <Link to='/services'>Services</Link>
           </li>
           <li className='transition duration-100 hover-underline-animation ease-in-out font-medium'>
             <Link to='/blogs'>Blogs</Link>
@@ -63,22 +81,25 @@ export default function Navbar () {
           <div className='hidden max-[693px]:block'>
             {UserName === 'LOGIN' ? (
               <button
-                className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[477px]:px-[1rem] max-[477px]:py-[0.5rem]'
+                className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[510px]:px-[1rem] max-[510px]:py-[0.5rem]'
                 onClick={whereToNavigate}
               >
-                <span className='text-[1.35rem] max-[477px]:text-[0.9rem] '>
+                <span className='text-[1.35rem] max-[510px]:text-[0.9rem] '>
                   {UserName}
                 </span>
               </button>
             ) : (
-              <button
-                className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[477px]:px-[1rem] max-[477px]:py-[0.5rem]'
-                onClick={whereToNavigate}
-              >
-                <span className='text-[1.35rem] max-[477px]:text-[0.9rem] '>
-                  {UserName}
-                </span>
-              </button>
+              <div className='flex h-[3.3rem] gap-[1rem]'>
+                <img src={userLogo} className='' alt='userLogo' />
+                <button
+                  className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[510px]:px-[1rem] max-[510px]:py-[0.5rem]'
+                  onClick={whereToNavigate}
+                >
+                  <span className='text-[1.35rem] max-[510px]:text-[0.9rem] '>
+                    {UserName}
+                  </span>
+                </button>
+              </div>
             )}
             <div className='flex justify-center'>
               <div
@@ -104,7 +125,8 @@ export default function Navbar () {
                     Edit Profile
                   </p>
                 </button>
-                <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
+
+                {/* <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
                   <img
                     src={settings}
                     className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'
@@ -113,8 +135,12 @@ export default function Navbar () {
                   <p className='text-white font-[400] text-[1.2rem] max-[693px]:text-[1.1rem]'>
                     Settings
                   </p>
-                </button>
-                <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
+                </button> */}
+
+                <button
+                  className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'
+                  onClick={helpNavigate}
+                >
                   <img
                     src={help}
                     className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'
@@ -124,7 +150,10 @@ export default function Navbar () {
                     Help
                   </p>
                 </button>
-                <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] pt-[0.5rem] pb-[0.4rem]'>
+                <button
+                  className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] pt-[0.5rem] pb-[0.4rem]'
+                  onClick={UserSignOut}
+                >
                   <img
                     src={logout}
                     className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'
@@ -143,22 +172,25 @@ export default function Navbar () {
       <div className='max-[693px]:hidden'>
         {UserName === 'LOGIN' ? (
           <button
-            className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[477px]:px-[1rem] max-[477px]:py-[0.6rem]'
+            className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[510px]:px-[1rem] max-[510px]:py-[0.6rem]'
             onClick={whereToNavigate}
           >
-            <span className='text-[1.35rem] max-[477px]:text-[1rem] '>
+            <span className='text-[1.35rem] max-[510px]:text-[1rem] '>
               {UserName}
             </span>
           </button>
         ) : (
-          <button
-            className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[477px]:px-[1rem] max-[477px]:py-[0.6rem]'
-            onClick={whereToNavigate}
-          >
-            <span className='text-[1.35rem] max-[477px]:text-[1rem] '>
-              {UserName}
-            </span>
-          </button>
+          <div className='flex h-[3.3rem] gap-[1rem]'>
+            <img src={userLogo} className='' alt='userLogo' />
+            <button
+              className='p-4 login-button text-[rgb(176,174,174)] relative flex justify-center items-center max-[960px]:px-[1.6rem] max-[960px]:py-[0.8rem] max-[510px]:px-[1rem] max-[510px]:py-[0.6rem]'
+              onClick={whereToNavigate}
+            >
+              <span className='text-[1.35rem] max-[510px]:text-[1rem] '>
+                {UserName}
+              </span>
+            </button>
+          </div>
         )}
         <div className='flex justify-center'>
           <div className={`dropdown-menu ${toggle ? 'active' : 'inactive'}`}>
@@ -182,7 +214,7 @@ export default function Navbar () {
                 Edit Profile
               </p>
             </button>
-            <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
+            {/* <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
               <img
                 src={settings}
                 className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'
@@ -191,8 +223,11 @@ export default function Navbar () {
               <p className='text-white font-[400] text-[1.2rem] max-[693px]:text-[1.1rem]'>
                 Settings
               </p>
-            </button>
-            <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
+            </button> */}
+            <button
+              className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'
+              onClick={helpNavigate}
+            >
               <img
                 src={help}
                 className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'
@@ -202,7 +237,10 @@ export default function Navbar () {
                 Help
               </p>
             </button>
-            <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem]'>
+            <button
+              className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem]'
+              onClick={UserSignOut}
+            >
               <img
                 src={logout}
                 className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'
