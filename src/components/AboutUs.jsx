@@ -9,19 +9,19 @@ import Closing from './Closing'
 
 function AboutUs () {
   return (
-    <div className='flex flex-col gap-[6rem] justify-center items-center w-[100%] bg-[#EFEFEF]'>
+    <div className='flex flex-col gap-[6rem] justify-center items-center w-[100%] max-[1024px]:gap-[3rem] bg-[#EFEFEF]'>
       <Navbar />
       <h1 className='services-heading text-[4rem] underline underline-offset-4 text-[#373636]'>ABOUT US</h1>
-      <div className='flex flex-1 w-[90%] justify-center gap-[4.5rem] px-[2rem] my-[20px]'>
-        <div className='flex flex-col px-[4rem] py-[5rem] about-us-left-div w-[50%] rounded-3xl'>
-          <h4 className='about-us-small-heading text-[1.8rem] px-[2rem]'>
+      <div className='flex flex-1 w-[95%] justify-center gap-[3.5rem] px-[2rem] my-[20px] max-[1024px]:flex-col max-[1024px]:my-[12px] max-[400px]:my-[7px]'>
+        <div className='flex flex-col px-[4rem] py-[5rem] about-us-left-div w-[50%] rounded-3xl max-[1024px]:w-[100%] max-[600px]:px-[1.5rem] max-[400px]:py-[3rem]'>
+          <h4 className='about-us-small-heading text-[1.8rem] px-[2rem] max-[400px]:text-[1.6rem]'>
             How it Started
           </h4>
-          <h1 className='text-[4rem] mb-[30px] pt-[7px] text-wrap px-[2rem] about-us-main-heading'>
+          <h1 className='text-[4rem] mb-[30px] pt-[7px] text-wrap px-[2rem] about-us-main-heading max-[600px]:text-[3.2rem] max-[400px]:text-[2.4rem] max-[400px]:mb-[22px]'>
             Journey with Fitness Decoder,
             <br /> Where Mind & Body Unite For Thriving
           </h1>
-          <p className=' text-[1.5rem] px-[2rem] about-us-description'>
+          <p className='text-[1.5rem] px-[2rem] about-us-description max-[600px]:text-[1.4rem] max-[400px]:text-[1.3rem]'>
             At our core, we are dedicated to fostering a holistic approach to
             well-being, aiming to empower individuals to cultivate a life that
             exudes balance and vitality. Within our community, you will find a
@@ -29,14 +29,11 @@ function AboutUs () {
             and passionate wellness enthusiasts, all committed to guiding and
             supporting you throughout your transformative journey. We understand
             that true well-being extends beyond the physical realm, encompassing
-            mental and emotional facets as well. Therefore, we strive to offer
-            personalized fitness plans tailored to your unique needs, equip you
-            with effective mental health tools, and provide a nurturing platform
-            for fostering meaningful connections within our community.
+            mental and emotional facets as well.
           </p>
         </div>
-        <div className='flex justify-center items-center '>
-          <img src={Aboutus_logo} className='object-cover w-[70%]' alt='' />
+        <div className='flex w-[40%] justify-center items-center max-[1024px]:w-[100%]'>
+          <img src={Aboutus_logo} className='object-cover w-[70%] max-[1024px]:w-[50%] max-[800px]:w-[60%] max-[600px]:w-[70%]' alt='' />
         </div>
       </div>
       {/* <div className='flex w-[90%] justify-center gap-[4rem] px-[2rem]'>

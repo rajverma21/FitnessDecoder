@@ -37,8 +37,13 @@ export default function Navbar () {
       navigate('/login')
     }
   }
+
   const helpNavigate = () => {
     navigate('/contact')
+  }
+
+  const dashboardNavigate = () => {
+    navigate('/dashboard')
   }
 
   const UserSignOut = () => {
@@ -105,7 +110,10 @@ export default function Navbar () {
               <div
                 className={`dropdown-menu ${toggle ? 'active' : 'inactive'}`}
               >
-                <button className='flex justify-start items-center gap-[2rem] px-[1rem] mx-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
+                <button
+                  className='flex justify-start items-center gap-[2rem] px-[1rem] mx-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'
+                  onClick={dashboardNavigate}
+                >
                   <img
                     src={userLogo}
                     className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'
@@ -115,7 +123,10 @@ export default function Navbar () {
                     My Profile
                   </p>
                 </button>
-                <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
+                <button
+                  className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'
+                  onClick={dashboardNavigate}
+                >
                   <img
                     src={edit}
                     className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'
@@ -194,7 +205,10 @@ export default function Navbar () {
         )}
         <div className='flex justify-center'>
           <div className={`dropdown-menu ${toggle ? 'active' : 'inactive'}`}>
-            <button className='flex justify-start items-center gap-[2rem] px-[1rem] mx-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
+            <button
+              className='flex justify-start items-center gap-[2rem] px-[1rem] mx-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'
+              onClick={dashboardNavigate}
+            >
               <img
                 src={userLogo}
                 className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'
@@ -204,7 +218,10 @@ export default function Navbar () {
                 My Profile
               </p>
             </button>
-            <button className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'>
+            <button
+              className='flex justify-start items-center gap-[2rem] mx-[1rem] px-[1rem] py-[1rem] border-b-2 border-[#9d9696] max-[693px]:py-[0.6rem]'
+              onClick={dashboardNavigate}
+            >
               <img
                 src={edit}
                 className='h-[3rem] w-[3rem] max-[693px]:h-[2rem] max-[693px]:w-[2rem]'

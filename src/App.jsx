@@ -10,7 +10,8 @@ import LoginForm from './components/LoginForm'
 import WhyChooseUs from './components/WhyChooseUs'
 import ContactUs from './components/ContactUs'
 import AboutUs from './components/AboutUs'
-import Countdown from "./components/Countdown";
+import Countdown from './components/Countdown'
+import Dashboard from './components/Dashboard'
 
 function App () {
   return (
@@ -25,6 +26,7 @@ function App () {
           <Route path='/contact' element={<ContactUs />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/blogs' element={<Countdown />} />
+          <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </div>
