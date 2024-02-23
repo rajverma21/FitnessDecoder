@@ -3,14 +3,14 @@ import Sidebar from './Sidebar'
 import Content from './Content'
 
 const Dashboard = () => {
-  const [selectedOption, setSelectedOption] = useState('My Profile')
+  const [selectedOption, setSelectedOption] = useState('Introduction')
 
   const handleOptionChange = option => {
     setSelectedOption(option)
   }
 
   return (
-    <div className='flex h-screen bg-gray-200'>
+    <div className='flex min-h-[100vh] '>
       <Sidebar
         selectedOption={selectedOption}
         onOptionChange={handleOptionChange}

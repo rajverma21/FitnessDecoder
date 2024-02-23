@@ -4,14 +4,26 @@ import { useNavigate } from 'react-router-dom'
 
 const Sidebar = ({ selectedOption, onOptionChange }) => {
   const navigate = useNavigate()
-  const options = ['My Profile', 'Edit Profile', 'Settings']
+  const options = [
+    'Introduction',
+    'Nature of Service',
+    'Consent',
+    'Personal Information',
+    'Cookies',
+    'Log Data',
+    'Confidentiality',
+    'Security',
+    'Minimum Age',
+    'Changes to Policy',
+    'Grievance Redressal'
+  ]
   const BackToHome = () => {
     navigate('/')
   }
 
   return (
     <div className='w-1/5 bg-gradient-to-b from-gray-800 to-gray-700 text-white p-6 shadow-lg rounded-r-lg flex flex-col'>
-      <h2 className='text-[4rem] font-bold mb-6'>Dashboard</h2>
+      <h2 className='text-[3.3rem] p-3 font-bold mb-6'>Privacy Policy</h2>
       <ul className='flex-1'>
         {options.map(option => (
           <li

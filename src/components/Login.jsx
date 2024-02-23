@@ -112,7 +112,7 @@ export default function Login () {
           </div>
           <div className='flex px-2 items-center text-[12.5px] py-2 gap-2 font-[500] text-[#9298a3]'>
             <input type='checkbox' className='scale-125' />
-            <span className='flex-1 1.4rem '>Rememeber me</span>
+            <span className='flex-1 1.4rem '>Remember me</span>
             <a href='/' className='1.4rem'>
               Forgot Password?
             </a>
